@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selamat Ulang Tahun!</title>
+    <!-- Link ke Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- CSS Kustom untuk styling -->
+    <style>
+        body {
+            background-color: #fce4ec;
+            font-family: 'Arial', sans-serif;
+        }
+        .birthday-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .birthday-card img {
+            width: 150px;
+            height: 200px;
+            border-radius: 5%;
+            margin-bottom: 20px;
+        }
+        .birthday-card h1 {
+            font-size: 3rem;
+            color: #f06292;
+            font-weight: bold;
+        }
+        .birthday-card p {
+            font-size: 1.25rem;
+            color: #333;
+        }
+        .balloon {
+            font-size: 3rem;
+        }
+        .btn-custom {
+            background-color: #f06292;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Audio dengan autoplay dan muted -->
+    <audio id="background-audio" autoplay muted loop>
+        <source src="https://drive.google.com/uc?export=download&id=1FHnSIa60ugAUtly94aA0PUFwrUmOoVTn" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="birthday-card">
+                    <img src="Salsa2.jpg" alt="Gambar Ulang Tahun">
+                    <h1>Selamat Ulang Tahun!</h1>
+                    <p>Semoga hari ini penuh kebahagiaan, tawa, dan banyak kejutan manis! 🎉</p>
+                    <p class="balloon">🎈🎈🎈</p>
+                    <p>Teruslah menjadi orang yang luar biasa dan penuh keceriaan!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS dan Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- Script untuk unmute audio setelah halaman dimuat -->
+    <script>
+        window.addEventListener('load', function() {
+            const audio = document.getElementById('background-audio');
+            audio.muted = false; // Unmute audio setelah halaman dimuat
+        });
+
+        // Menambahkan event listener untuk unmute saat pengguna berinteraksi
+        document.body.addEventListener('click', function() {
+            const audio = document.getElementById('background-audio');
+            if (audio.muted) {
+                audio.muted = false; // Unmute ketika pengguna mengklik halaman
+            }
+        });
+    </script>
+</body>
+</html>
